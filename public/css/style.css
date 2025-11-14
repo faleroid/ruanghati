@@ -1,0 +1,9 @@
+.notification {
+    /* Waktu transisi untuk efek fade-out */
+    transition: opacity 0.5s ease-out;
+}
+
+.notification.fade-out {
+    /* Saat class fade-out ditambahkan, buat jadi transparan */
+    opacity: 0;
+}
