@@ -12,10 +12,10 @@ session_start();
 <body>
     <header>
         <nav>
-            <a href="index.php" class="logo">RESONA</a>
+            <a href="index.php" class="logo">RuangHati</a>
             <ul class="nav-menu">
                 <?php if (isset($_SESSION['user_id'])): ?>
-                    <li><a href="journal.php">Jejak Pikir</a></li>
+                    <li><a href="journal.php">RuangHening</a></li>
                     <li><a href="forum.php">Lingkar Cerita</a></li>
                     <li><a href="resources.php">Ruang Nafas</a></li>
 

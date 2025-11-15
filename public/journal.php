@@ -33,19 +33,19 @@
 
     <form action="../app/controllers/journals/createJournal.php" method="POST">
         <div class="form-group">
-            <label for="date">Tanggal Kejadian</label>
+            <label for="date">Tanggal</label>
             <input type="date" id="date" name="date" required value="<?= date('Y-m-d') ?>">
         </div>
         <div class="form-group">
-            <label for="situation">Situasi</label>
+            <label for="situation">Bagaimana situasimu?</label>
             <textarea id="situation" name="situation" rows="3" placeholder="Apa yang terjadi?"></textarea>
         </div>
         <div class="form-group">
-            <label for="auto_thought">Pikiran Otomatis</label>
+            <label for="auto_thought">Tuangkan pikiran negatifmu</label>
             <textarea id="auto_thought" name="auto_thought" rows="3" placeholder="Apa yang Anda rasakan/pikirkan?"></textarea>
         </div>
         <div class="form-group">
-            <label for="alt_thought">Pikiran Alternatif</label>
+            <label for="alt_thought">Bagaimana jika dilihat dari sudut pandang lain?</label>
             <textarea id="alt_thought" name="alt_thought" rows="3" placeholder="Apa cara pandang lain yang lebih logis?"></textarea>
         </div>
         <button type="submit" class="btn">Simpan Jurnal</button>
@@ -61,10 +61,10 @@
     <?php else: ?>
         <?php foreach ($entries as $entry): ?>
             <div class="journal-entry">
-                <h3>Pada Tanggal: <?= htmlspecialchars($entry['entry_date']) ?></h3>
-                <p><strong>Situasi:</strong><br> <?= nl2br(htmlspecialchars($entry['situation'])) ?></p>
-                <p><strong>Pikiran Otomatis:</strong><br> <?= nl2br(htmlspecialchars($entry['auto_thought'])) ?></p>
-                <p><strong>Pikiran Alternatif:</strong><br> <?= nl2br(htmlspecialchars($entry['alt_thought'])) ?></p>
+                <h3>Tanggal: <?= htmlspecialchars($entry['entry_date']) ?></h3>
+                <p><strong>Situasimu:</strong><br> <?= nl2br(htmlspecialchars($entry['situation'])) ?></p>
+                <p><strong>Overthinkingmu:</strong><br> <?= nl2br(htmlspecialchars($entry['auto_thought'])) ?></p>
+                <p><strong>Pandangan dari Sudut Lain:</strong><br> <?= nl2br(htmlspecialchars($entry['alt_thought'])) ?></p>
                 <div class="entry-actions">
                     <a href="edit_journal.php?id=<?= $entry['entry_id'] ?>" class="btn-edit">Edit</a>
                     <a href="../app/controllers/journals/deleteJournal.php?id=<?= $entry['entry_id'] ?>" 

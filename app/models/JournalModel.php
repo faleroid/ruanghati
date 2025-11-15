@@ -6,7 +6,7 @@ class JournalModel {
         $this->conn = $db_connection;
     }
 
-    public function create($userId, $data) {
+    public function createJournal($userId, $data) {
         $sql = "INSERT INTO journal_entries (user_id, entry_date, situation, auto_thought, alt_thought) 
                 VALUES (?, ?, ?, ?, ?)";
         

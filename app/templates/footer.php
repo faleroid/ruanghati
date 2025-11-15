@@ -1,5 +1,5 @@
 </main> <footer>
-        <p>&copy; <?= date('Y') ?> RESONa. Tugas Akhir Pemrograman Web.</p>
+        <p>&copy; <?= date('Y') ?> Temukan Sudut Pandang Barumu</p>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
