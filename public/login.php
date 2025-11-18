@@ -1,4 +1,6 @@
 <?php
+$pageTitle = "Login";
+$pageStyles = "css/auth.css";
 require_once '../app/templates/header.php';
 
 if (isset($_SESSION['user_id'])) {
@@ -7,15 +9,15 @@ if (isset($_SESSION['user_id'])) {
 }
 ?>
 
-<div class="auth-container-centered">
+<div class="auth-container">
     <div class="form-box">
-        <h2>Login</h2>
+        <h2>Masuk ke Akun RuangHati</h2>
         
         <?php if (isset($_GET['error_login'])): ?>
             <p class="notification error"><?= htmlspecialchars($_GET['error_login']) ?></p>
         <?php endif; ?>
         
-        <form action="../app/controllers/auth/login.php" method="POST">
+        <form class="form-wrapper" action="../app/controllers/auth/login.php" method="POST">
             <div class="form-group">
                 <label for="login_email">Email</label>
                 <input type="email" id="login_email" name="email" required>
@@ -24,10 +26,12 @@ if (isset($_SESSION['user_id'])) {
                 <label for="login_password">Password</label>
                 <input type="password" id="login_password" name="password" required>
             </div>
-            <button type="submit" class="btn">Login</button>
+            <div class="form-group">
+                <button type="submit" class="btn">Login</button>
+            </div>
         </form>
     </div>
-    <a href="register.php">Buat Akun</a>
+    <p>Belum Punya Akun? <a href="register.php"> Daftar Akun Sekarang</a></p>
 </div>
 
 <?php

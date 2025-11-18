@@ -12,4 +12,8 @@ class UserPayloadValidator {
     public static function isValidEmail($email) {
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
+
+    public static function passwordsMatch($password, $passwordConfirm) {
+        return $password === $passwordConfirm;
+    }
 }

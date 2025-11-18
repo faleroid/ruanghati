@@ -1,4 +1,6 @@
 <?php
+$pageTitle = "Daftar Akun";
+$pageStyles = "css/auth.css";
 require_once '../app/templates/header.php';
 
 if (isset($_SESSION['user_id'])) {
@@ -7,9 +9,9 @@ if (isset($_SESSION['user_id'])) {
 }
 ?>
 
-<div class="auth-container-centered">
+<div class="auth-container">
     <div class="form-box">
-        <h2>Daftar Akun Baru</h2>
+        <h2>Daftar Akun RuangHati</h2>
         
         <?php if (isset($_GET['error'])): ?>
             <p class="notification error"><?= htmlspecialchars($_GET['error']) ?></p>
@@ -20,7 +22,7 @@ if (isset($_SESSION['user_id'])) {
         <?php endif; ?>
 
 
-        <form action="../app/controllers/auth/register.php" method="POST">
+        <form action="../app/controllers/auth/register.php" method="POST" class="form-wrapper">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -33,10 +35,16 @@ if (isset($_SESSION['user_id'])) {
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" class="btn">Daftar</button>
+            <div class="form-group">
+                <label for="password">Konfirmasi Password</label>
+                <input type="password" id="password-confirm" name="password-confirm" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Daftar</button>
+            </div>
         </form>
     </div>
-    <a href="login.php">login</a>
+    <p>Sudah Punya Akun? <a href="login.php"> Masuk Sekarang</a></p>
 </div>
 
 <?php

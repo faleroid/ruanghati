@@ -1,5 +1,5 @@
 </main> <footer>
-        <p>&copy; <?= date('Y') ?> Temukan Sudut Pandang Barumu</p>
+        <p>&copy; <?= date('Y') ?> RuangHati | Temukan Sudut Pandang Barumu</p>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

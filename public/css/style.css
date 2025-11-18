@@ -1,9 +1,98 @@
-.notification {
-    /* Waktu transisi untuk efek fade-out */
-    transition: opacity 0.5s ease-out;
+:root {
+    --sans-serif: "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: 'Poppins', sans-serif;
+    /* --color-primary-darkest: #373E4F;
+    --color-primary-dark: #646F89;
+    --color-primary: #8090B0;
+    --color-accent: #ABAAC0;
+    --color-background-light: #DFD2D5; */
+    --color-primary-darkest: rgb(206, 41, 55);
+    --color-primary-light: rgba(255, 217, 240, 0.463);
+    --color-primary-dark: #007BFF;
+    --color-primary: #28A745;
+    --color-yellow-dark: rgb(112, 117, 7);
+    --color-yellow-light:rgb(252, 254, 207);
+    --color-accent: #212529;
+    --color-text-mid: #6c757d;
+    --color-background-light: #FFFFFF;
+    --color-light: #F2F3F7;
 }
 
-.notification.fade-out {
-    /* Saat class fade-out ditambahkan, buat jadi transparan */
-    opacity: 0;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+}
+
+header{
+    display: block;
+    padding: 10px 100px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    display: inline-block;
+}
+
+body{
+    min-height: 100vh;
+}
+
+body, header, footer{
+    background-color: var(--color-background-light);
+}
+
+.logo{
+    text-decoration: none;
+    color: var(--color-primary-darkest);
+    font-weight: 500;
+}
+
+ul{
+    display: flex;
+    gap: 25px;
+}
+
+li{
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.btn-register{
+    color: white;
+    font-weight: 350;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: var(--color-primary-darkest);
+}
+
+.btn-login, .btn-logout{
+    color: var(--color-primary-darkest);
+    font-weight: 450;
+    padding: 8px 15px;
+    border: 1px solid var(--color-primary-darkest);
+    border-radius: 5px;
+}
+
+footer p{
+    bottom: 0;
+    margin: 0 50px;
+    font-size: 12px;
+    border-top: 1px solid black;
+    padding: 15px;
+    text-align: center;
 }

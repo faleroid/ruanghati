@@ -5,7 +5,7 @@ require_once '../../validator/UserPayloadValidator.php';
 require_once '../../models/UserModel.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: ../../public/index.php');
+    header('Location: ../../index.php');
     exit;
 }
 

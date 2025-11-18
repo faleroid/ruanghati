@@ -1,0 +1,117 @@
+a.lingkarcerita{
+    color: var(--color-primary-darkest);
+}
+
+.thread-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text-mid);
+}
+
+.content{
+    min-height: 85vh;
+    padding: 20px 100px;
+}
+
+h2{
+    font-weight: 500;
+    color: var(--color-accent);
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-primary-darkest);
+}
+
+.post-author{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.post-date p{
+    font-weight: 400;
+    color: var(--color-text-mid);
+    font-size: 14px;
+}
+
+.post-owner p{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.post-entry{
+    margin-top:20px ;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border:1.5px solid var(--color-light);
+    border-radius: 5px;
+}
+
+.comment-tag{
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--color-text-mid);
+}
+
+.main-content{
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+hr{
+    margin: 30px 0;
+}
+
+.post-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 300;
+}
+
+.content-owner, .content-date{
+    font-size: 14px;
+    color: var(--color-text-mid);
+}
+
+form textarea{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    resize: none;
+}
+
+.btn-wrapper{
+    display: flex;
+    justify-content: right;
+}
+
+.btn{
+    margin-top: 5px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    background-color: var(--color-primary-darkest);
+    color: var(--color-background-light);
+    border: none;
+}
+
+.btn-secondary{
+    display: inline-block;
+    border: 1px solid var(--color-primary-darkest);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.btn-secondary a{
+    color: var(--color-primary-darkest);
+}

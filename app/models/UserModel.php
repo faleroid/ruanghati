@@ -7,7 +7,7 @@ class UserModel {
     }
 
     public function findUser($email, $username='') {
-        $sql = "SELECT user_id, password_hash FROM users WHERE email = ? OR username = ?";
+        $sql = "SELECT * FROM users WHERE email = ? OR username = ?";
         $stmt = mysqli_prepare($this->conn, $sql);
         
         if (!$stmt) {

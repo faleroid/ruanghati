@@ -1,4 +1,6 @@
 <?php
+$pageTitle = "Ruang Hening";
+$pageStyles = "css/ruang_hening_edit.css";
 require_once '../app/templates/header.php';
 require_once '../db/connect.php';
 require_once '../app/models/JournalModel.php';
@@ -20,37 +22,42 @@ if (!$entry) {
 }
 ?>
 
-<div class="form-box">
-    <h2>Edit Jurnal</h2>
-    <a href="journal.php" class="btn-secondary" style="font-size: 14px;">Kembali</a>
-    <br><br>
+<section class="content">
+    <div class="content-wrapper">
+        <div class="form-box">
+            <h2>Edit</h2>
 
-    <?php if (isset($_GET['error'])): ?>
-        <p class="error"><?= htmlspecialchars($_GET['error']) ?></p>
-    <?php endif; ?>
+            <?php if (isset($_GET['error'])): ?>
+                <p class="error"><?= htmlspecialchars($_GET['error']) ?></p>
+            <?php endif; ?>
 
-    <form action="../app/controllers/journals/UpdateJournal.php" method="POST">
-        <input type="hidden" name="entry_id" value="<?= $entry['entry_id'] ?>">
+            <form action="../app/controllers/journals/UpdateJournal.php" method="POST">
+                <input type="hidden" name="entry_id" value="<?= $entry['entry_id'] ?>">
 
-        <div class="form-group">
-            <label for="date">Tanggal Kejadian</label>
-            <input type="date" id="date" name="date" required value="<?= htmlspecialchars($entry['entry_date']) ?>">
+                <div class="form-group">
+                    <label for="date">Tanggal Kejadian</label>
+                    <input type="date" id="date" name="date" required value="<?= htmlspecialchars($entry['entry_date']) ?>">
+                </div>
+                <div class="form-group">
+                    <label for="situation">Situasi</label>
+                    <textarea id="situation" name="situation" rows="3" required><?= htmlspecialchars($entry['situation']) ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="auto_thought">Pikiran Otomatis</label>
+                    <textarea id="auto_thought" name="auto_thought" rows="3" required><?= htmlspecialchars($entry['auto_thought']) ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="alt_thought">Pikiran Alternatif</label>
+                    <textarea id="alt_thought" name="alt_thought" rows="3" required><?= htmlspecialchars($entry['alt_thought']) ?></textarea>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn">Perbarui</button>
+                    <a href="journal.php" class="btn-secondary" style="font-size: 14px;">Batal</a>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="situation">Situasi</label>
-            <textarea id="situation" name="situation" rows="3" required><?= htmlspecialchars($entry['situation']) ?></textarea>
-        </div>
-        <div class="form-group">
-            <label for="auto_thought">Pikiran Otomatis</label>
-            <textarea id="auto_thought" name="auto_thought" rows="3" required><?= htmlspecialchars($entry['auto_thought']) ?></textarea>
-        </div>
-        <div class="form-group">
-            <label for="alt_thought">Pikiran Alternatif</label>
-            <textarea id="alt_thought" name="alt_thought" rows="3" required><?= htmlspecialchars($entry['alt_thought']) ?></textarea>
-        </div>
-        <button type="submit" class="btn">Perbarui Jurnal</button>
-    </form>
-</div>
+    </div>
+</section>
 
 <?php
 require_once '../app/templates/footer.php';
