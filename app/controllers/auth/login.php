@@ -30,7 +30,7 @@ if ($user && password_verify($password, $user['password_hash'])) {
     $_SESSION['username'] = $user['username'];
     $_SESSION['role'] = $user['role'];
 
-    header('Location: ../../../public/journal.php');
+    header('Location: ../../../public/landing_page.php');
 } else {
     header('Location: ../../../public/login.php?error_login=Email atau password salah');
 }

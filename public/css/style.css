@@ -1,16 +1,15 @@
 :root {
     --sans-serif: "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-sans: 'Poppins', sans-serif;
-    /* --color-primary-darkest: #373E4F;
-    --color-primary-dark: #646F89;
-    --color-primary: #8090B0;
-    --color-accent: #ABAAC0;
-    --color-background-light: #DFD2D5; */
-    --color-primary-darkest: rgb(206, 41, 55);
-    --color-primary-light: rgba(255, 217, 240, 0.463);
-    --color-primary-dark: #007BFF;
-    --color-primary: #28A745;
-    --color-yellow-dark: rgb(112, 117, 7);
+    --color-primary-darkest: rgb(65, 128, 204); 
+    --color-blue: rgb(29,85,153);
+    --color-bluelight: rgb(102, 199, 253);
+    --color-pinklight: rgb(254, 179, 198);
+    --color-pink: rgb(224, 98, 130);
+    --color-pinkdark: rgb(135, 38, 62);
+    --color-primary-green: #28A745;
+    --color-greenlight: #a0ffb1;
+    --color-primary-yellow: rgb(235, 151, 55);
     --color-yellow-light:rgb(252, 254, 207);
     --color-accent: #212529;
     --color-text-mid: #6c757d;
@@ -39,10 +38,6 @@ header nav{
     align-items: center;
 }
 
-img{
-    display: inline-block;
-}
-
 body{
     min-height: 100vh;
 }
@@ -59,7 +54,8 @@ body, header, footer{
 
 ul{
     display: flex;
-    gap: 25px;
+    gap: 30px;
+    align-items: center;
 }
 
 li{
@@ -72,19 +68,23 @@ li a{
     font-weight: 500;
 }
 
-.btn-register{
-    color: white;
-    font-weight: 350;
-    padding: 8px 15px;
-    border-radius: 5px;
-    background: var(--color-primary-darkest);
+.btn-auth{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .btn-login, .btn-logout{
     color: var(--color-primary-darkest);
-    font-weight: 450;
-    padding: 8px 15px;
     border: 1px solid var(--color-primary-darkest);
+    padding: 10px 12px;
+    border-radius: 5px;
+}
+
+.btn-register{
+    background-color: var(--color-primary-darkest);
+    color: var(--color-light);
+    padding: 10px 12px;
     border-radius: 5px;
 }
 
@@ -95,4 +95,26 @@ footer p{
     border-top: 1px solid black;
     padding: 15px;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 30px;
+    }
+
+    footer p {
+        margin: 0 20px;
+    }
+}
+
+/* 2. Mobile (Lebar layar maksimal 576px) */
+@media screen and (max-width: 576px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-menu{
+        display: none;
+    }
 }

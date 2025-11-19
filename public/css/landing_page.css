@@ -1,0 +1,219 @@
+.content{
+    min-height: 85vh;
+    padding: 50px 100px;
+}
+
+h2{
+    font-weight: 500;
+}
+
+h2.main-title{
+    font-size: 30px;
+}
+
+.gray-text{
+    color: var(--color-text-mid);
+}
+
+.landingpage{
+    color: var(--color-primary-darkest);
+}
+
+.overview{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+}
+
+.overview .text-side{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}   
+
+.overview a{
+    color: var(--color-light);
+}
+
+.overview img{
+    width: 450px;
+}
+
+.btn-help{
+    padding: 10px 12px;
+    background-color: var(--color-primary-darkest);
+    color: var(--color-light);
+    border: none;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+.features-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.features-wrapper h3{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-light);
+}
+
+.features-wrapper p{
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-light);
+}
+
+.feature{
+    padding: 10px 15px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.feature button{
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+button a{
+    text-decoration: none;
+}
+
+.ft1{
+    background: linear-gradient(180deg, var(--color-primary-green), var(--color-greenlight));
+}
+
+.ft2{
+    background: linear-gradient(180deg, var(--color-blue), var(--color-bluelight));
+}
+.ft3{
+    background: linear-gradient(180deg, var(--color-pink), var(--color-pinklight));
+}
+
+.event-container h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.event-container p{
+    color: var(--color-text-mid);
+}
+
+.event-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    background-color: transparent;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px var(--color-text-mid);
+    border: none;
+    border-radius: 5px;
+}
+
+.card p{
+    font-size: 14px;
+}
+
+.btn-e-regist{
+    color: var(--color-primary-darkest);
+}
+
+.btn-e-regist p{
+    color: var(--color-primary-darkest);
+    text-align: right;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+    *{
+        
+    }
+
+    .content{
+        padding: 30px 25px;
+    }
+
+    .model{
+        display: none;
+    }
+
+    *>p{
+        font-size: 14px;
+    }
+
+    .btn-help a{
+        display: inline-block;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .text-side>*{
+        padding: 0;
+    }
+
+    .text-side h2{
+        font-size: 20px;
+    }
+
+    *>h2{
+        font-size: 20px;
+        padding: 0 15px;
+    }
+
+    .features .gray-text{
+        padding: 0 15px;
+    }
+
+    .overview{
+        padding: 0 15px;
+    }
+    
+    .features-wrapper{
+        padding: 0 30px;
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 110px;
+    }
+
+    .event-container{
+        padding: 0 15px;
+    }
+
+    .event-container h2{
+        padding: 0;
+    }
+
+    .event-wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card{
+        box-sizing: border-box;
+        width: 100%;
+    }
+}

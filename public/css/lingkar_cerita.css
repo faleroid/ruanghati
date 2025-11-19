@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 a.lingkarcerita{
     color: var(--color-primary-darkest);
 }
@@ -35,7 +39,7 @@ h2{
 }
 
 form{
-    min-width: 400px;
+    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -47,7 +51,7 @@ form{
     display: flex;
     flex-flow: column;
     gap: 10px;
-    min-width: 100%;
+    width: 100%;
 }
 
 input, textarea{
@@ -177,4 +181,40 @@ a{
 
 hr{
     margin: 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+/* 2. Mobile (Lebar layar maksimal 576px) */
+@media screen and (max-width: 576px) {
+
+    h2{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    form{
+        width: 100%;
+    }
+
+  .content{
+    padding: 20px;
+  }
+
+  input, textarea{
+    font-size: 14px;
+  }
+
+.thread-group{
+    width: 100%;
+}
+
+h3.thread-title{
+    font-size: 16px;
+}
 }

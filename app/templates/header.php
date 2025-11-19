@@ -28,17 +28,20 @@ session_start();
     <header>
         <nav>
             <?php if(isset($pageStylesIndex)): ?>
-                <img src="app/icons/logo.svg" alt="logo" width="85px">
+                <img src="public/assets/icons/logo.svg" alt="logo" width="85px">
             <?php else: ?>
                 <a href="../index.php" class="logo">
-                    <img src="../app/icons/logo.svg" alt="logo" width="85px">
+                    <img src="assets/icons/logo.svg" alt="logo" width="85px">
                 </a>  
             <?php endif; ?>
             <ul class="nav-menu">
                 <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="landing_page.php" class="landingpage">Beranda</a></li>
                     <li><a href="journal.php" class="ruanghening">Ruang Hening</a></li>
                     <li><a href="forum.php" class="lingkarcerita">Lingkar Cerita</a></li>
-                    <li><a href="ruang_nafas.php" class="ruangnafas">Ruang Nafas</a></li>
+                    <li>
+                        <a href="ruang_nafas.php" class="ruangnafas">Ruang Nafas</a>
+                    </li>
 
                     <?php if ($_SESSION['role'] === 'admin'): ?>
                         <li><a href="admin.php">Admin Panel</a></li>
@@ -47,7 +50,7 @@ session_start();
                     <li><a href="../app/controllers/auth/logout.php" class="btn-logout">Logout</a></li>
                 
                 <?php else: ?>
-                    <li><a href="resources.php">Ruang Nafas</a></li>
+                    <li><a href="public/ruang_nafas.php">Ruang Nafas</a></li>
                     <li>
                         <div class="btn-auth">
                             <?php if(isset($pageStylesIndex)): ?>

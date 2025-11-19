@@ -62,3 +62,26 @@ a{
     font-weight: 550;
     color: var(--color-primary-darkest);
 }
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+    .form-wrapper{
+        min-width: 300px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    label, .btn{
+        font-size: 14px;
+    }
+
+    p{
+        font-size: 14px;
+        text-align: center;
+    }
+}

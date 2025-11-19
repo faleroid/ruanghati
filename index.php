@@ -3,25 +3,29 @@ $pageStylesIndex = "public/css/welcomingPage.css";
 require_once 'app/templates/header.php'; 
 
 if (isset($_SESSION['user_id'])) {
-    header('Location: public/journal.php');
+    header('Location: public/landing_page.php');
     exit;
 }
 ?>
 
 <section class="welcome">
-    <div class="welcome-container">
-        <div class="welcome-wrapper">
-            <?php if (isset($_GET["status"]) && $_GET["status"]=="logout_success"): ?>
+        <?php if (isset($_GET["status"]) && $_GET["status"]=="logout_success"): ?>
                 <p class="notification error">Anda berhasil logout.</p>
-            <?php endif; ?>
-
-            <h1>Buka Kacamatamu dengan Sudut Pandang yang Belum Pernah Kamu Bayangkan</h1>
-            <p>Bertumbuh bersama dan kuasai manajemen emosional yang lebih baik.</p>
-            <div class="welcome-btn">
-                <a href="public/login.php" class="btn">Mulai Sekarang</a>
+        <?php endif; ?>
+        <div class="welcome-wrapper">
+            <div class="content">
+                <div class="text">
+                    <h1>Buka Kacamatamu dengan Sudut Pandang yang Belum Pernah Kamu Bayangkan</h1>
+                    <p>Bertumbuh bersama dan kuasai manajemen emosional yang lebih baik.</p>
+                </div>
+                <div class="welcome-btn">
+                    <a href="public/login.php" class="btn">Mulai Sekarang</a>
+                </div>
+            </div>
+            <div class="image">
+                    <img src="public/assets/images/main.svg">
             </div>
         </div>
-    </div>
 </section>
 
     <div class="feature-lists">

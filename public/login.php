@@ -4,7 +4,7 @@ $pageStyles = "css/auth.css";
 require_once '../app/templates/header.php';
 
 if (isset($_SESSION['user_id'])) {
-    header('Location: journal.php');
+    header('Location: landing_page.php');
     exit;
 }
 ?>

@@ -115,3 +115,31 @@ form textarea{
 .btn-secondary a{
     color: var(--color-primary-darkest);
 }
+
+@media screen and (max-width: 576px) {
+
+    h2{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .content{
+    padding: 30px;
+    }
+
+    input, textarea{
+    font-size: 14px;
+    width: 80%;
+    }
+
+    .btn{
+        margin-bottom: 30px;
+    }
+
+    h3.thread-title{
+        font-size: 16px;
+    }
+}

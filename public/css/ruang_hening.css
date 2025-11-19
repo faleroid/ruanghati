@@ -42,13 +42,14 @@ h3{
     border: 1px solid var(--color-text-mid);
     padding: 20px;
     border-radius: 10px;
+    height: 100%;
     width: fit-content;
 }
 
 .motivate{
-    background-color: var(--color-yellow-light);
-    border: 1px solid var(--color-yellow-dark);
-    color: var(--color-yellow-dark);
+    background-color: rgb(222, 255, 223);
+    border: 1px solid var(--color-primary-green);
+    color: var(--color-primary-green);
     font-weight: 500;
     padding: 20px;
     border-radius: 10px;
@@ -142,4 +143,66 @@ a{
     justify-content: right;
     display: flex;
     gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+/* 2. Mobile (Lebar layar maksimal 576px) */
+@media screen and (max-width: 576px) {
+    *{
+        box-sizing: border-box;
+    }
+
+    .content{
+        padding: 25px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .content-wrapper{
+        flex-direction: column;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    .aside li{
+        width: 100%;
+    }
+
+    label, input, .btn{
+        font-size: 14px;
+    }
+
+    .btn{
+        margin-bottom: 30px;
+    }
+
+    .journal-entry{
+        width: 100%;
+    }
+
+    .journal-entry p, .journal-group{
+        font-size: 14px;
+    }
+
+    .btn-edit, .btn-delete{
+        font-size: 12px;
+    }
+
+    textarea, input{
+        box-sizing: border-box;
+        resize: none;
+        font-size: 14px;
+        width: 93%;
+    }
 }

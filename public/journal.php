@@ -19,7 +19,7 @@
 ?>
 
 <section class="content">
-    <h2>Hai, <?php echo $username?>! Gimana kabarnya hari ini?</h2>
+    <h2>Jaga kesehatanmu terus ya, <?php echo $username?>!</h2>
 
     <div class="content-wrapper">
         <div class="aside">
